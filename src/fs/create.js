@@ -1,3 +1,19 @@
+import { open, writeFile, close } from 'node:fs';
+import { dirname } from 'node:path';
+
+
 export const create = async () => {
-    // Write your code here 
+    // implement function that creates new file fresh.txt
+    // with content I am fresh and young inside of the files folder
+    // (if file already exists Error with message FS operation failed must be thrown)
+    const filePath = 'files/fresh.txt';
+    const fileData = 'I am fresh and young';
+
+    writeFile(filePath, fileData, { flag: 'wx' }, (err) => {
+        if (err) throw err;
+        console.log('success')
+    });
+
 };
+
+create();
