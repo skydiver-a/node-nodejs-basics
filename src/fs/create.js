@@ -1,6 +1,4 @@
-import { open, writeFile, close } from 'node:fs';
-import { dirname } from 'node:path';
-
+import { writeFile } from 'node:fs';
 
 export const create = async () => {
     // implement function that creates new file fresh.txt
