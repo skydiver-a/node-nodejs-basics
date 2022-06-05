@@ -7,9 +7,9 @@ export const compress = async () => {
 
     const sourceFile = createReadStream('files/fileToCompress.txt', 'utf-8');
     const targetFile = createWriteStream('files/archive.gz');
-    const archiveToGzip = createGzip();
+    const compressToArchive = createGzip();
 
-    sourceFile.pipe(archiveToGzip).pipe(targetFile);
+    sourceFile.pipe(compressToArchive).pipe(targetFile);
 };
 
 compress();
